@@ -1,0 +1,40 @@
+@import "../../../variable.scss";
+@import "../../styles.scss";
+
+.event-view-wrap{
+    margin: 20px 0px;
+    background-color: $creme-theme-bg;
+    color: $blue-theme-bg;
+    padding: 10px;
+    border-radius: 7px;
+    font-family: $font-family-regular;
+}
+.event-title{
+    font-size: $font-size-large;
+    color: $blue-theme-bg;
+    letter-spacing: 1px;
+    font-family: $font-family-bold;
+    margin-bottom: 2px;
+}
+.timeWrapper{
+    div{
+        display: inline-block;
+    }
+    margin: 10px 0px;
+    
+}
+.dateWrap{
+    float: right;
+}
+.sub-header{
+    @extend .sub-heading; 
+    margin-bottom: 2px;
+}
+.addToCalendar{
+    padding: 8px 8px;
+    border: none;
+    border-radius: 4px;
+    color: $brown-color;
+    background-color: #f4eed1;
+    font-family: $font-family-bold;
+}
