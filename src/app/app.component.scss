@@ -1,0 +1,18 @@
+.content-wrap{
+    padding: 0px 20px 0px 20px;
+}
+.tabs-wrapper{
+    display: flex;
+    margin-bottom: 20px;
+}
+.tabs{
+    padding: 15px 0px;
+    color: #FDFAEA;
+    flex: 1;
+    text-align: center
+}
+.selectedTab{
+    border-bottom: 1px solid #FDFAEA;
+    background-color: #38496d;
+
+}
