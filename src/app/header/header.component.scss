@@ -1,0 +1,11 @@
+@import "../../../variable.scss";
+.header-wrapper{
+    padding: 20px 0px;
+    width: 100%;
+    background-color: $blue-theme-bg;
+    font-family: $font-family-regular;
+    text-align: center;
+    font-size: 18px;
+    color: $font-color;
+    letter-spacing: 1px;
+}

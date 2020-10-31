@@ -1,0 +1,46 @@
+@import "../../../variable.scss";
+.createInput{
+    padding: 5px 0px 5px 5px;
+    border-radius: 2px;
+    width: calc(100% - 7px);
+    height: 40px;
+    font-size: $font-size-medium;
+    background-color: $blue-theme-bg;
+    font-family: $font-family-regular;
+    border: 1px solid rgba($color: $creme-theme-bg, $alpha: 0.5);
+    color: $font-color;
+}
+input[type=text]:focus {
+    outline: none;
+   }
+ input[type=text]::placeholder { 
+     color: $font-color;
+     opacity: 0.3;
+ }
+ .labelHeading{
+     color: $font-color;
+     font-size: $font-size-medium;
+     margin-bottom: 10px;
+     font-family: $font-family-regular;
+ }
+ .inputWrapper{
+     margin-bottom: 20px;
+ }
+ .invalid-required{
+    color: $error-color;   
+    font-family: $font-family-bold;
+    font-size: $font-size-medium;
+    padding-top: 5px;
+}
+::ng-deep ngb-datepicker{
+    background-color: $font-color;
+}
+
+::ng-deep ngb-timepicker .btn-link, .btn-outline-primary{
+    color: $font-color;
+}
+
+::ng-deep ngb-timepicker .btn-outline-primary{
+    color: $font-color;
+    border-color: $font-color;
+}

@@ -1,0 +1,18 @@
+@import "../../../variable.scss";
+input.event-search{
+    padding: 5px 0px 5px 5px;
+    border-radius: 2px;
+    width: calc(100% - 7px);
+    height: 30px;
+    font-size: $font-size-medium;
+    background-color: $blue-theme-bg;
+    border: none;
+    border-bottom: 1.5px solid $creme-theme-bg;
+    color: $font-color;
+}
+input[type=text]:focus {
+   outline: none;
+  }
+input[type=text]::placeholder { 
+    color: $font-color;
+}

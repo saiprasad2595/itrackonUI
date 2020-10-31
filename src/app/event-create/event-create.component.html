@@ -1,0 +1,58 @@
+<form [formGroup]="createEventForm" (ngSubmit)="onSubmit()">
+
+    <div class="inputWrapper">
+        <li class="labelHeading">Title</li>
+        <input class="createInput" type="text" formControlName="title">
+        <div *ngIf="submitted && form.title.errors">
+            <div *ngIf="form.title.errors.required" class="invalid-required">Title is required</div>
+        </div>
+    </div>
+
+    <div class="inputWrapper">
+        <li class="labelHeading">Speaker</li>
+        <input class="createInput" type="text" formControlName="speaker">
+        <div *ngIf="submitted && form.speaker.errors">
+            <div *ngIf="form.speaker.errors.required" class="invalid-required">Speaker is required</div>
+        </div>
+    </div>
+    <div class="inputWrapper">
+        <li class="labelHeading">Organizer Email</li>
+        <input class="createInput" type="text" formControlName="email">
+        <div *ngIf="submitted && form.email.errors">
+            <div *ngIf="form.email.errors.required" class="invalid-required">Email is required</div>
+        </div>
+    </div>
+    <div>
+        <li class="labelHeading">From Date & Time</li>
+        <ngb-datepicker formControlName="fromDate"></ngb-datepicker>
+        <div *ngIf="submitted && form.fromDate.errors">
+            <div *ngIf="form.fromDate.errors.required" class="invalid-required">From Date is required</div>
+        </div>
+        <ngb-timepicker formControlName="fromTime" [meridian]="true"></ngb-timepicker>
+        <div *ngIf="submitted && form.fromTime.errors">
+            <div *ngIf="form.fromTime.errors.required" class="invalid-required">From Time is required</div>
+        </div>
+    </div>
+    <div>
+        <li class="labelHeading">To Date & Time</li>
+        <ngb-datepicker class='custom-datepicker' formControlName="toDate"></ngb-datepicker>
+        <div *ngIf="submitted && form.toDate.errors">
+            <div *ngIf="form.toDate.errors.required" class="invalid-required">To Date is required</div>
+        </div>
+        <ngb-timepicker formControlName="toTime" [meridian]="true"></ngb-timepicker>
+        <div *ngIf="submitted && form.toTime.errors">
+            <div *ngIf="form.toTime.errors.required" class="invalid-required">To Time is required</div>
+        </div>
+    </div>
+    <div class="inputWrapper">
+        <li class="labelHeading">Meeting link</li>
+        <input class="createInput" type="text" formControlName="hangoutLink">
+    </div>
+
+    <div class="inputWrapper">
+        <li class="labelHeading">Description</li>
+        <textarea class="createInput" type="text" formControlName="description"></textarea>
+    </div>
+
+</form>
+<button (click)="onSubmit()">Submit</button>
