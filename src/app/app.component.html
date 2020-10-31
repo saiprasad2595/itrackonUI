@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="tabs-wrapper">
+  <div [ngClass]="getClass('VIEW_EVENTS')" class="tabs" (click)="selectedTab('VIEW_EVENTS')">
+    View Events</div>
+  <div [ngClass]="getClass('ADD_EVENTS')" class="tabs" (click)="selectedTab('ADD_EVENTS')">Add Events</div>
+</div>
+<div class="content-wrap">
+  <div *ngIf="tabSelection === 'VIEW_EVENTS'">
+    <app-event-search></app-event-search>
+    <app-event-view></app-event-view>
+  </div>
+  <app-event-create *ngIf="tabSelection === 'ADD_EVENTS'"></app-event-create>
+</div>
+
+
+<!-- <div class="toolbar" role="banner">
+  <button (click)="createEventInGmail()">Add to Calendar</button>
+</div> -->
+
+
+
+
+<router-outlet></router-outlet>
